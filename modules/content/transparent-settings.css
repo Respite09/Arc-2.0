@@ -149,7 +149,7 @@ input[type="search"],
 
 @-moz-document url-prefix("about:preferences"), url-prefix("about:addons") {
   :root {
-    /* Both internal pages declare light and dark color schemes in their markup. */
+    /* Both pages declare color-scheme in markup; leave it theme-controlled. */
     --arc-settings-surface: light-dark(
       rgb(255 255 255 / 35%),
       rgb(10 14 20 / 45%)
@@ -174,9 +174,9 @@ input[type="search"],
 }
 
 @-moz-document url-prefix("about:addons") {
-  .sticky-container,
-  .main-search,
-  .main-heading {
+  addon-page-header .sticky-container,
+  addon-page-header .main-search,
+  addon-page-header .main-heading {
     background: transparent !important;
   }
 
