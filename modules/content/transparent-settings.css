@@ -158,7 +158,7 @@ input[type="search"],
       rgb(255 255 255 / 8%)
     );
     --arc-settings-blur: 25px;
-    --zen-colors-tertiary: var(--arc-settings-surface) !important;
+    --arc-settings-backdrop-filter: blur(var(--arc-settings-blur)) saturate(1.3);
     --zen-settings-secondary-background: var(--arc-settings-surface) !important;
   }
 }
@@ -172,7 +172,7 @@ input[type="search"],
   #preferences-root groupbox,
   #preferences-root setting-group {
     background-color: var(--zen-settings-secondary-background) !important;
-    backdrop-filter: blur(var(--arc-settings-blur)) saturate(1.3);
+    backdrop-filter: var(--arc-settings-backdrop-filter);
     border: 1px solid var(--arc-settings-border) !important;
     border-radius: var(--arc-border-radius, 12px) !important;
   }
@@ -189,13 +189,13 @@ input[type="search"],
     --input-background-color: var(--arc-settings-surface);
     --input-border-color: var(--arc-settings-border);
     --input-search-border-radius: var(--arc-border-radius, 12px);
-    backdrop-filter: blur(var(--arc-settings-blur)) saturate(1.3);
+    backdrop-filter: var(--arc-settings-backdrop-filter);
   }
 
   #main addon-list[type="extension"] moz-card.addon.card,
   #main addon-list[type="plugin"] moz-card.addon.card {
     --card-background-color: var(--arc-settings-surface);
     --card-border: 1px solid var(--arc-settings-border);
-    backdrop-filter: blur(var(--arc-settings-blur)) saturate(1.3);
+    backdrop-filter: var(--arc-settings-backdrop-filter);
   }
 }
