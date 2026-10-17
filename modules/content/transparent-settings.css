@@ -149,7 +149,6 @@ input[type="search"],
 
 @-moz-document url-prefix("about:preferences"), url-prefix("about:addons") {
   :root {
-    color-scheme: light dark;
     --arc-settings-surface: light-dark(
       rgb(255 255 255 / 35%),
       rgb(10 14 20 / 45%)
