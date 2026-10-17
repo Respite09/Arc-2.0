@@ -151,30 +151,6 @@
     "defaultValue": false
   },
   {
-    "property": "mod.forkedtidypopup.disablecustomhovercolor",
-    "label": "Disable *custom hover* color on menus and popups (~Any hover color pref below will be ignored~).",
-    "type": "checkbox",
-    "defaultValue": false
-  },
-  {
-    "property": "mod.forkedtidypopup.disablezenprimarycolor",
-    "label": "Disable use of *primary color* chosen in Theme Menu to use Custom Hover Colors below.",
-    "type": "checkbox",
-    "defaultValue": false
-  },
-  {
-    "property": "mod.forkedtidypopup.hovercolor.light",
-    "label": "Button color when hovered (~Light mode~)",
-    "type": "string",
-    "placeholder": "rgba(243,202,176,1)"
-  },
-  {
-    "property": "mod.forkedtidypopup.hovercolor.dark",
-    "label": "Button color when hovered (~Dark mode~)",
-    "type": "string",
-    "placeholder": "rgba(87,65,50,1)"
-  },
-  {
     "property": "mod.forkedtidypopup.disabletidyextension",
     "label": "Disable *Tidy Extension Menu*",
     "type": "checkbox",
