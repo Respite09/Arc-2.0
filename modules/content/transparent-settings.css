@@ -170,6 +170,33 @@ input[type="search"],
     backdrop-filter: var(--arc-settings-backdrop-filter) !important;
     border: 1px solid var(--arc-settings-border) !important;
     border-radius: var(--arc-settings-radius) !important;
+    padding: 16px 20px !important;
+    margin-block-end: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Drop legacy theme surfaces on nested elements so they don't stack on the card */
+  #preferences-root groupbox groupbox,
+  #preferences-root groupbox setting-group,
+  #preferences-root setting-group groupbox,
+  #preferences-root setting-group setting-group,
+  #preferences-root groupbox .indent,
+  #preferences-root .subcategory,
+  #preferences-root .zen-sidebar-layout-box,
+  #preferences-root .zen-workspace-settings-box {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-inline: 0 !important;
+  }
+
+  #preferences-root groupbox::before,
+  #preferences-root groupbox::after,
+  #preferences-root setting-group::before,
+  #preferences-root setting-group::after {
+    background: transparent !important;
+    box-shadow: none !important;
   }
 }
 
@@ -188,10 +215,19 @@ input[type="search"],
     backdrop-filter: var(--arc-settings-backdrop-filter) !important;
   }
 
-  #main addon-list moz-card.addon.card {
+  #main addon-list moz-card.addon.card,
+  #main addon-list addon-card moz-card,
+  #main addon-card > moz-card,
+  #main .addon.card {
     --card-background-color: var(--arc-settings-surface);
     --card-border-radius: var(--arc-settings-radius);
     --card-border: 1px solid var(--arc-settings-border);
+    --card-padding: 16px;
+    background-color: var(--arc-settings-surface) !important;
+    border: 1px solid var(--arc-settings-border) !important;
+    border-radius: var(--arc-settings-radius) !important;
+    padding: 16px !important;
+    box-shadow: none !important;
     backdrop-filter: var(--arc-settings-backdrop-filter) !important;
   }
 }
