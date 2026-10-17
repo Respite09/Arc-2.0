@@ -1,8 +1,3 @@
-:root {
-  --zen-colors-tertiary: transparent !important;
-  --zen-settings-secondary-background: transparent !important;
-}
-
 #preferences-root,
 #search-container {
   background-color: transparent !important;
@@ -159,7 +154,7 @@ input[type="search"],
     );
     --arc-settings-blur: 25px;
     --arc-settings-backdrop-filter: blur(var(--arc-settings-blur)) saturate(1.3);
-    --zen-settings-secondary-background: var(--arc-settings-surface) !important;
+    --zen-settings-secondary-background: var(--arc-settings-surface);
   }
 }
 
@@ -171,7 +166,7 @@ input[type="search"],
 
   #preferences-root groupbox,
   #preferences-root setting-group {
-    background-color: var(--zen-settings-secondary-background) !important;
+    background-color: var(--arc-settings-surface) !important;
     backdrop-filter: var(--arc-settings-backdrop-filter);
     border: 1px solid var(--arc-settings-border) !important;
     border-radius: var(--arc-border-radius, 12px) !important;
