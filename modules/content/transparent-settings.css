@@ -157,9 +157,7 @@ input[type="search"],
     --zen-colors-tertiary: transparent !important;
     --zen-settings-secondary-background: transparent !important;
   }
-}
 
-@-moz-document url-prefix("about:preferences"), url-prefix("about:addons") {
   :is(
     #preferences-root groupbox,
     #preferences-root setting-group,
@@ -168,7 +166,6 @@ input[type="search"],
     search-addons > moz-input-search
   ) {
     backdrop-filter: var(--arc-settings-backdrop-filter);
-    border-radius: var(--arc-settings-radius);
   }
 }
 
@@ -197,6 +194,7 @@ input[type="search"],
   #main addon-list[type="extension"] moz-card.addon.card,
   #main addon-list[type="plugin"] moz-card.addon.card {
     --card-background-color: var(--arc-settings-surface);
+    --card-border-radius: var(--arc-settings-radius);
     --card-border: 1px solid var(--arc-settings-border);
   }
 }
