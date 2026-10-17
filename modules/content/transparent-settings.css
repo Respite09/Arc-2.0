@@ -187,8 +187,7 @@ input[type="search"],
     backdrop-filter: var(--arc-settings-backdrop-filter) !important;
   }
 
-  #main addon-list[type="extension"] moz-card.addon.card,
-  #main addon-list[type="plugin"] moz-card.addon.card {
+  #main addon-list moz-card.addon.card {
     --card-background-color: var(--arc-settings-surface);
     --card-border-radius: var(--arc-settings-radius);
     --card-border: 1px solid var(--arc-settings-border);
