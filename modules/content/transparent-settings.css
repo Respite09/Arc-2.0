@@ -181,6 +181,7 @@ input[type="search"],
   }
 
   /* The add-on search is separate from Preferences' #search-container. */
+  /* The host blur shows through the search input's translucent shadow content. */
   search-addons > moz-input-search {
     --input-background-color: var(--arc-settings-surface);
     --input-border-color: var(--arc-settings-border);
