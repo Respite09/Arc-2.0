@@ -485,6 +485,21 @@
   transition-duration: 0.5s !important;
 }
 
+/* Keep toolbar buttons from overlapping each other */
+#nav-bar toolbarbutton.toolbarbutton-1,
+#zen-library-button {
+  position: relative;
+  flex-shrink: 0;
+  margin-inline: 2px !important;
+}
+
+#back-button:hover,
+#forward-button:hover,
+#reload-button:hover,
+#zen-library-button:hover {
+  z-index: 1;
+}
+
 /* Prevent icon crowding while the Library stack is open. */
 #zen-sidebar-foot-buttons[zen-library-stack-open] #zen-library-button,
 #zen-sidebar-foot-buttons[zen-library-stack-open] #zen-library-button:hover {
