@@ -180,6 +180,7 @@ input[type="search"],
     background: transparent !important;
   }
 
+  /* The add-on search is separate from Preferences' #search-container. */
   search-addons > moz-input-search {
     --input-background-color: var(--arc-settings-surface);
     --input-border-color: var(--arc-settings-border);
