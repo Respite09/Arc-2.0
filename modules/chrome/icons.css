@@ -481,8 +481,13 @@
 }
 
 #zen-library-button:hover {
-  transform: scale(1.25);
+  transform: scale(1.05);
   transition-duration: 0.5s !important;
+}
+
+#zen-sidebar-foot-buttons[zen-library-stack-open] #zen-library-button,
+#zen-sidebar-foot-buttons[zen-library-stack-open] #zen-library-button:hover {
+  transform: none !important;
 }
 
 :is(#home-button):hover {
