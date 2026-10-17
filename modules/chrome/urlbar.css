@@ -1084,7 +1084,8 @@
 #urlbar[open],
 #urlbar[breakout-extend] {
   transform-origin: center !important;
-  animation: arc-urlbar-stretch-329 0.25s ease-out forwards !important;
+  animation: arc-urlbar-stretch-329 0.25s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
 }
 
 #urlbar[open] > .urlbar-background,
