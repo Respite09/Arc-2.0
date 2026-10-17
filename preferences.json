@@ -207,27 +207,6 @@
   {
     "type": "dropdown",
     "value": "number",
-    "property": "arc-urlbar-animation",
-    "label": "*Animation* for URL Bar when focused .",
-    "defaultValue": 1,
-    "options": [
-      {
-        "label": "Disable",
-        "value": 0
-      },
-      {
-        "label": "Stretch",
-        "value": 1
-      },
-      {
-        "label": "Fade-in",
-        "value": 2
-      }
-    ]
-  },
-  {
-    "type": "dropdown",
-    "value": "number",
     "property": "arcline.url.bar",
     "label": "Enables *Arcline-like* URL Bar.",
     "defaultValue": 0,

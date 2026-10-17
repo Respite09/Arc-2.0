@@ -99,21 +99,6 @@
     border-radius: var(--arc-border-radius, 12px) !important;
   }
 
-  @media not (-moz-pref("arc-urlbar-animation", 0)) {
-    /* stretch animation */
-    @media (-moz-pref("arc-urlbar-animation", 1)) {
-      #urlbar[open] {
-        animation: stretch 0.25s ease-out forwards !important;
-      }
-    }
-
-    /* fade-in animation */
-    @media (-moz-pref("arc-urlbar-animation", 2)) {
-      #urlbar[open] {
-        animation: fade-in 0.25s ease-out !important;
-      }
-    }
-  }
   @keyframes stretch {
     from {
       transform: scaleX(0);
@@ -151,26 +136,6 @@
       saturate(var(--arc-urlbar-saturate, 1))
       contrast(var(--arc-urlbar-contrast, 1)) !important;
     opacity: 1 !important;
-  }
-}
-
-/* Stretch-in animation for the focused URL bar (works with Arcline-like too) */
-@media not (-moz-pref("arc-urlbar-animation", 0)) {
-  #urlbar[breakout-extend] {
-    transform-origin: center !important;
-    animation: arc-urlbar-stretch 0.3s cubic-bezier(0.2, 0.9, 0.3, 1) both !important;
-  }
-}
-
-@keyframes arc-urlbar-stretch {
-  from {
-    transform: scaleX(0.6);
-    opacity: 0;
-  }
-
-  to {
-    transform: scaleX(1);
-    opacity: 1;
   }
 }
 
@@ -242,19 +207,6 @@
     border-radius: 15px !important;
     overflow: hidden !important;
     backdrop-filter: blur(70px) !important;
-    animation: urlbar-v329-fade-in 0.15s ease-in !important;
-  }
-
-  @keyframes urlbar-v329-fade-in {
-    from {
-      opacity: 0;
-      filter: blur(0);
-    }
-
-    to {
-      opacity: 1;
-      filter: none;
-    }
   }
 }
 
@@ -1116,4 +1068,49 @@
       opacity: 1 !important;
     }
   }
+}
+
+/* ------------------ Floating URL bar: transparent, blurred, stretch (v3.2.9) ------------------ */
+@keyframes arc-urlbar-stretch-329 {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+#urlbar[open],
+#urlbar[breakout-extend] {
+  transform-origin: center !important;
+  animation: arc-urlbar-stretch-329 0.25s ease-out forwards !important;
+}
+
+#urlbar[open] > .urlbar-background,
+#urlbar[breakout-extend] > .urlbar-background {
+  background: light-dark(rgb(255 255 255 / 35%), rgb(10 14 20 / 45%)) !important;
+  backdrop-filter: blur(40px) saturate(1.3) !important;
+  border: 1px solid light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 6%)) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 45%) !important;
+}
+
+#urlbar[open] .urlbarView,
+#urlbar[open] #urlbar-results,
+#urlbar[open] .urlbarView-body-inner {
+  background: transparent !important;
+}
+
+#urlbar[open] .urlbarView-row,
+#urlbar[open] .urlbarView-row-inner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+}
+
+#urlbar[open] .urlbarView-row[selected],
+#urlbar[open] .urlbarView-row:hover {
+  background: light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 8%)) !important;
+  scale: 1 !important;
+  filter: none !important;
 }
