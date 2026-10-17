@@ -197,7 +197,7 @@
     "type": "checkbox",
     "property": "arc.urlbar.background",
     "label": "Disable *background zoom blur* when URL bar popup.",
-    "defaultValue": true
+    "defaultValue": false
   },
   {
     "property": "arc-urlbar-hide-results",
@@ -208,8 +208,8 @@
     "type": "dropdown",
     "value": "number",
     "property": "arc-urlbar-animation",
-    "label": "*Animation* for URL Bar when focused (~Won't work if Arcline-like URL Bar is enabled~).",
-    "defaultValue": 0,
+    "label": "*Animation* for URL Bar when focused .",
+    "defaultValue": 1,
     "options": [
       {
         "label": "Disable",

@@ -136,14 +136,41 @@
 }
 
 /* ------------------ URL Bar BG ------------------ */
-/* Blur Zoom Animation on opening URLBar */
+/* Page fades into a heavy blur while the URL bar is focused/open */
 @media not (-moz-pref("arc.urlbar.background")) {
-  #browser:has(#urlbar[open]) .browserStack {
+  #browser .browserStack {
+    transition:
+      filter 0.35s ease,
+      scale 0.35s ease !important;
+  }
+
+  #browser:has(#urlbar[open]) .browserStack,
+  #browser:has(#urlbar[breakout-extend]) .browserStack {
     scale: 1.075 !important;
     filter: blur(var(--arc-urlbar-blur, 25px))
       saturate(var(--arc-urlbar-saturate, 1))
       contrast(var(--arc-urlbar-contrast, 1)) !important;
     opacity: 1 !important;
+  }
+}
+
+/* Stretch-in animation for the focused URL bar (works with Arcline-like too) */
+@media not (-moz-pref("arc-urlbar-animation", 0)) {
+  #urlbar[breakout-extend] {
+    transform-origin: center !important;
+    animation: arc-urlbar-stretch 0.3s cubic-bezier(0.2, 0.9, 0.3, 1) both !important;
+  }
+}
+
+@keyframes arc-urlbar-stretch {
+  from {
+    transform: scaleX(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 1;
   }
 }
 
