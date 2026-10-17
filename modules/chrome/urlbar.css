@@ -202,6 +202,35 @@
     contrast(var(--arc-urlbar-contrast, 1)) !important;
 }
 
+@media not (-moz-pref("arcline.url.bar", 1)) {
+  #urlbar[open] .urlbar-background {
+    border-radius: 15px !important;
+    background: light-dark(rgb(255 255 255 / 60%), rgb(36 36 36 / 30%)) !important;
+    opacity: 1 !important;
+    outline: none !important;
+  }
+
+  #urlbar[open] {
+    box-shadow: 0 20px 40px rgb(0 0 0 / 50%);
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(70px) !important;
+    animation: urlbar-v329-fade-in 0.15s ease-in !important;
+  }
+
+  @keyframes urlbar-v329-fade-in {
+    from {
+      opacity: 0;
+      filter: blur(0);
+    }
+
+    to {
+      opacity: 1;
+      filter: none;
+    }
+  }
+}
+
 /* URL Bar suggestions text color adjustments 
 .urlbarView-row {
   &[selected] {
