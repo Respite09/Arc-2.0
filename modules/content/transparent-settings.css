@@ -166,7 +166,7 @@ input[type="search"],
   #preferences-root groupbox,
   #preferences-root setting-group {
     background-color: var(--arc-settings-surface) !important;
-    backdrop-filter: var(--arc-settings-backdrop-filter);
+    backdrop-filter: var(--arc-settings-backdrop-filter) !important;
     border: 1px solid var(--arc-settings-border) !important;
     border-radius: var(--arc-settings-radius) !important;
   }
@@ -183,7 +183,7 @@ input[type="search"],
     --input-background-color: var(--arc-settings-surface);
     --input-border-color: var(--arc-settings-border);
     --input-search-border-radius: var(--arc-settings-radius);
-    backdrop-filter: var(--arc-settings-backdrop-filter);
+    backdrop-filter: var(--arc-settings-backdrop-filter) !important;
   }
 
   #main addon-list[type="extension"] moz-card.addon.card,
@@ -191,6 +191,6 @@ input[type="search"],
     --card-background-color: var(--arc-settings-surface);
     --card-border-radius: var(--arc-settings-radius);
     --card-border: 1px solid var(--arc-settings-border);
-    backdrop-filter: var(--arc-settings-backdrop-filter);
+    backdrop-filter: var(--arc-settings-backdrop-filter) !important;
   }
 }
