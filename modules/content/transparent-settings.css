@@ -144,4 +144,43 @@ input[type="search"],
 #search-container {
   border: none !important;
   border-radius: 0 !important;
+  backdrop-filter: none !important;
+}
+
+@-moz-document url-prefix("about:preferences") {
+  #search-container {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+  }
+}
+
+@-moz-document url-prefix("about:addons") {
+  .sticky-container,
+  .main-search,
+  .main-heading {
+    background: transparent !important;
+  }
+
+  search-addons > moz-input-search {
+    --input-background-color: light-dark(
+      rgb(255 255 255 / 35%),
+      rgb(10 14 20 / 45%)
+    );
+    --input-border-color: light-dark(
+      rgb(0 0 0 / 8%),
+      rgb(255 255 255 / 8%)
+    );
+    --input-search-border-radius: var(--arc-border-radius, 12px);
+  }
+
+  #main addon-list[type="extension"] moz-card.addon.card,
+  #main addon-list[type="plugin"] moz-card.addon.card {
+    --card-background-color: light-dark(
+      rgb(255 255 255 / 35%),
+      rgb(10 14 20 / 45%)
+    );
+    --card-border: 1px solid
+      light-dark(rgb(0 0 0 / 8%), rgb(255 255 255 / 8%));
+    backdrop-filter: blur(var(--arc-urlbar-blur, 25px)) saturate(1.3);
+  }
 }
