@@ -191,6 +191,22 @@ input[type="search"],
     padding-inline: 0 !important;
   }
 
+  /* Inner cards (e.g. Default browser, Startup) must not stack on the outer card */
+  #preferences-root groupbox moz-card,
+  #preferences-root setting-group moz-card,
+  #preferences-root setting-group moz-fieldset,
+  #preferences-root setting-group setting-control,
+  #preferences-root groupbox .box-padded,
+  #preferences-root groupbox hbox:not(.indent),
+  #preferences-root #defaultBrowserBox {
+    --card-background-color: transparent;
+    --card-border: none;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
   #preferences-root groupbox::before,
   #preferences-root groupbox::after,
   #preferences-root setting-group::before,

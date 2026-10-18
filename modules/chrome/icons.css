@@ -480,17 +480,22 @@
   transition-duration: 0.5s !important;
 }
 
-#zen-library-button:hover {
-  transform: scale(1.05);
-  transition-duration: 0.5s !important;
-}
-
 /* Keep toolbar buttons from overlapping each other */
 #nav-bar toolbarbutton.toolbarbutton-1,
 #zen-library-button {
   position: relative;
   flex-shrink: 0;
   margin-inline: 2px !important;
+}
+
+#zen-sidebar-foot-buttons {
+  gap: 4px !important;
+}
+
+#zen-library-button,
+#zen-library-button .toolbarbutton-icon {
+  overflow: hidden !important;
+  transform: none !important;
 }
 
 #back-button:hover,
